@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+<header class="header">
+    <a href="index.html" class="logo">Portfolio</a>
+    <nav class="navbar">
+        <a href={% url 'index' %} class="active">Home</a>
+        <a href={% url 'about' %} >About</a>
+        <a href={% url 'contact' %}>Contact</a>
+        <a href={% url 'skills' %} >Skills</a>
+  
+</header>
+<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+
+{% include 'main/nav.html' %}
+
+<section class="about" id="about">
+    <h2 class="heading">About <span>Me</span></h2>
+    
+    <div class="about-img">
+        {% comment %} <img src="assets/img/profile.jpg"  alt=""> {% endcomment %}
+    </div>
+
+    <div class="about-content">
+        <h3>Web Developer</h3>
+        <p>Proficient in Core Java, Python, Django, and various databases like MySQL, MongoDB, and SQLite3. I blend strong coding skills with basic frontend expertise. My portfolio showcases innovative projects that harness my versatile skills, delivering efficient and user-friendly solutions to complex challenges.</p>
+
+        <div class="btn-box btns">
+            <a href="#" class="btn read-more-btn">Read More</a>
+        </div>
+
+        <div class="extra-content" style="display: none;">
+            <p>This is the additional content that will be displayed when you click "Read More". You can add more content here.</p>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const readMoreBtn = document.querySelector('.read-more-btn');
+        const extraContent = document.querySelector('.extra-content');
+
+        readMoreBtn.addEventListener('click', function(event) {
+            event.preventDefault();
+            extraContent.style.display = 'block';
+            this.style.display = 'none';
+        });
+    });
+</script>
+
+{% endblock %}
